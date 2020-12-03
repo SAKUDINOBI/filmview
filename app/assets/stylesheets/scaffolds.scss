@@ -1,7 +1,7 @@
 body {
   background-color: #ddd;
   color: #333;
-  margin: 33px;
+  margin: 0px;
 }
 
 body, p, ol, ul, td {
@@ -9,7 +9,15 @@ body, p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
 }
-
+.logo{
+  float: left;
+    margin-top: 0;
+    left: 0;
+}
+.topnav{
+  float: right;
+    margin-top: 0;
+  }
 pre {
   background-color: #eee;
   padding: 10px;
@@ -74,7 +82,7 @@ label {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
-  margin: 33px auto;
+  margin: 0px auto;
   background-color: #fff;
   padding: 25px;
   border-radius: 5px;
