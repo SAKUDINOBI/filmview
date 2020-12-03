@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_20_180450) do
+ActiveRecord::Schema.define(version: 2020_12_03_162008) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
@@ -22,12 +22,20 @@ ActiveRecord::Schema.define(version: 2020_06_20_180450) do
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
-  create_table "roles", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
+  create_table "movies", force: :cascade do |t|
+    t.string "imdb_id"
+    t.string "title"
+    t.integer "year"
+    t.string "genre"
+    t.string "director"
+    t.string "country"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
+# Could not dump table "roles" because of following ActiveRecord::StatementInvalid
+#   SQLite3::BusyException: database is locked
 
   create_table "users", force: :cascade do |t|
     t.string "name"
